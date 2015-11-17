@@ -1,6 +1,7 @@
 var ReactDOM=require('react-dom');
 var React=require('react');
-var HeadApp=require('./components/head.js');
+var ReactApp=require('./components/app.react.js');
 
 
-ReactDOM.render(<HeadApp />,document.getElementById('app') );
+
+ReactDOM.render(<ReactApp />,document.getElementById('app') );
