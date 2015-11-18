@@ -1,5 +1,5 @@
  var KeyMirror = require('keymirror');
 
  module.exports = KeyMirror({
- 	INDEX_LINK: null
+ 	INDEX_LINK: null 
  });

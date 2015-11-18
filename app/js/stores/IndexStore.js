@@ -4,7 +4,7 @@ var assign = require('object-assign');
 var EventEmitter = require('events').EventEmitter;
 
 var _text = '首页';
-var CHANGE_EVENT="change";
+var CHANGE_EVENT="change"; 
 var IndexStore = assign({}, EventEmitter.prototype, {
 	emitChange: function() { 
 		this.emit(CHANGE_EVENT);
@@ -24,14 +24,15 @@ function indexLink(url,text) {
 	_text = text;
 	window.location.href = url;
 }
-
+ 
 AppDispatcher.register(function(action) {
 	switch (action.actionType) {
 		case IndexConstant.INDEX_LINK:
 			indexLink(action.url,action.text);
 			IndexStore.emitChange();
 			break;
-
+		case IndexConstant.SEND_MESSAGE:
+			sendMessage(action.text);
 		default:
 			break;
 	}

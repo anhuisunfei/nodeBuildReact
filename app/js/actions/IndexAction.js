@@ -10,6 +10,12 @@
  			url: _link,
  			text:_text
  		});
+ 	},
+ 	addMessage:function(_text){
+ 		AppDispatcher.dispatch({
+ 			actionType:IndexConstant.SEND_MESSAGE,
+ 			text:_text
+ 		})
  	}
  }
 
