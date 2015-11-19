@@ -4,7 +4,6 @@ var React=require('react');
 module.exports=React.createClass({
 	render:function(){
     var messages=this.props.messages;
-    
     var chatBody=messages.map(function(item){
         return  <tr key={item.id}>
                   <td>{item.id}</td>

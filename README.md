@@ -1,1 +1,1 @@
-# NodeReact 采用 Node.js 在服务端编译React+Flux
+# NodeReact Node.js + Socket.io +React 在线聊天

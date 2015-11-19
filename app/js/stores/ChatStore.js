@@ -20,18 +20,14 @@ var Chatstore = assign({}, EventEmitter.prototype, {
 	}
 }); 
  
-function sendMessage(_text){
-	messageList.push({
-		id:messageList.length+1,
-		message:_text,
-		date:Date.now()
-	}) 
+function sendMessage(data){
+	messageList.push(data) 
 }
 
 AppDispatcher.register(function(action) {
 	switch (action.actionType) { 
 		case ChatConstant.SEND_MESSAGE:
-			sendMessage(action.text);
+			sendMessage(action.data);
 			Chatstore.emitChange();
 		default:
 			break;

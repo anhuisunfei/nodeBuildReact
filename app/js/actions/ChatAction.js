@@ -2,10 +2,10 @@
  var ChatConstant=require('../constants/ChatConstant');
 
   var IndexAction = { 
- 	sendMessage:function(_text){
+ 	sendMessage:function(data){
  		AppDispatcher.dispatch({
  			actionType:ChatConstant.SEND_MESSAGE,
- 			text:_text
+ 			data:data
  		})
  	}
  }
