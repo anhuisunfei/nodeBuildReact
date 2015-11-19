@@ -2,6 +2,7 @@
 * **Build && Start**
 
 ```sh
+ npm install -g grunt-cli
  npm install
  gulp
 ```
